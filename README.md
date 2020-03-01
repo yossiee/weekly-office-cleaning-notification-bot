@@ -1,1 +1,1 @@
-# gas-slack-bot
+# weekly-office-cleaning-notification-bot

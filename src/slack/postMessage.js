@@ -15,14 +15,14 @@ function postMessage() {
       "icon_emoji": ":robot_face:", 
       "attachments": JSON.stringify([
         {
-          pretext: "これはプリテキストだよ\nほげほげふがふが！！",
+          // pretext: "これはプリテキストだよ\nほげほげふがふが！！",
           color: "good",
           author_name: "yossiee",
           author_link: "https://github.com/yossiee",
           author_icon: "https://avatars0.githubusercontent.com/u/38056766?s=400&v=4",
           thumb_url: "https://4.bp.blogspot.com/-aurP2wC6nSI/WZP34_BvCJI/AAAAAAABGCc/UDEGhvMKOKc89dZkwlFGQctBLR2vma2gwCLcBGAs/s400/soujiki_man.png",
-          title: "gas-slack-bot",
-          title_link: "https://github.com/yossiee/gas-slack-bot",
+          title: "weekly-office-cleaning-notification-bot",
+          title_link: "https://github.com/yossiee/weekly-office-cleaning-notification-bot",
           text: "A bot that sends a message to slack using Google Apps Script",
           footer: "Send from Google Apps Script",
           footer_icon: "https://www.gstatic.com/images/branding/product/2x/apps_script_64dp.png",
