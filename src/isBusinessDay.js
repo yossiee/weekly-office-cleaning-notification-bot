@@ -3,6 +3,7 @@ function isBusinessDay(){
   let dayOfWeek = today.getDay();
   // allow only `monday`
   if(dayOfWeek !== 1) {
+    console.log("A bot stoped working because today is not Monday.")
     return false;
   }
 
@@ -11,9 +12,8 @@ function isBusinessDay(){
 
   let todayEvents = calendar.getEventsForDay(today);
   if(todayEvents.length > 0){
-    for (let i=0; i<todayEvents.length; i++) {
-      console.log("Event title is : " + todayEvents[i].getTitle() +"\n")
-    }
+    console.log("A bot stoped working because today is public holiday.")
+    console.log(todayEvents)
     return false;
   }
   return true;
