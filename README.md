@@ -1,56 +1,59 @@
 # weekly-office-cleaning-notification-bot
 
-## Overview
-Every Monday we clean the office. There is a cleaning duty group, and the group turns around weekly.
-This time, I created a bot to notify which group is in charge this week.
+| [日本語](https://github.com/yossiee/weekly-office-cleaning-notification-bot/README.md) | [英語](https://github.com/yossiee/weekly-office-cleaning-notification-bot/README_EN.md) |
+| :---: | :---: |
 
-<img alt="demo" width="300" src="https://user-images.githubusercontent.com/38056766/75618359-506e5080-5bb0-11ea-8945-4710a729b51a.png">
+## 概要
+毎週月曜日にオフィスを掃除しますが、掃除当番グループが決まっており、グループは毎週順番に回していきます。
+今回作ったのは、今週どのグループが担当なのかを毎週時間になると slack に通知するボットを作成しました。
 
-## Dependencies
+<img alt="デモ" width="300" src="https://user-images.githubusercontent.com/38056766/75618359-506e5080-5bb0-11ea-8945-4710a729b51a.png">
+
+## 依存ソフトウェア
 - Google Account
 - Git
 - Node/npm
 
-## Architecture
-- Google Services
+## アーキテクチャ
+- Google サービス
     - Google Apps Script
-    - Google Spredsheet
-    - Google Calendar
+    - Google スプレッドシート
+    - Google カレンダー
 - Slack APIs
     - [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
-- Local environment
+- ローカル開発環境
     - [GitHub](https://github.com)
     - [clasp](https://github.com/google/clasp)
 
-## Specification
-1. Master data stored in Google Spreadsheet.
-2. Read the data and get the slackID of the user assigned to today's cleaning duty.
-3. Get calendar information from google calendar API and check if it is a holiday.
-4. If today is Monday and not public holiday, send a message with mention to the user of the obtained slackID.
-5. Finally, update the user data in the spreadsheet and finish the process.
+## 仕様
+1. Google スプレッドシートにマスタでーたが格納してあります。
+2. データを取得して今週アサインされるグループに所属するユーザの slackID を取得します。
+3. Google calendar API 本日が祝日かどうか調べます。Google が「日本の祝日」を公開しているのでそれを利用しています。
+4. 本日が月曜日かつ祝日でない場合は、取得したユーザに対してメンションをつけたメッセージをチャンネルへ送信します。
+5. 最後に、スプレッドシートにデータを保存して処理を終了します。
 
-## How to use `clasp` in local environment
-clasp is command line platform for manage and develop the Google Apps Script.<br>
-This is a [document](https://developers.google.com/apps-script/guides/clasp).
+## `clasp` の使い方メモ
+clasp とは、ローカル環境で Google Apps Script を実行できるプラットフォームです。<br>
+[公式ドキュメント](https://developers.google.com/apps-script/guides/clasp) はこちらをご参照下さい。
 
 ```sh
-# Install
+# npm パッケージをグローバルインストールします。
 $ npm install @google/clasp -g 
 
-# Login 
+# ログイン
 $ clasp login
-# Open the browseer then choose the account you want authentication.
-# Aftrer successful authentication, your login information will be saved in `~/.clasprc.json`
+# ブラウザが開きどの Google アカウントで認証するか聞かれるので利用するアカウントを選択します。
+# 認証に成功したら `~/.clasprc.json` にログイン情報が保存されます。
 
-# Logout
+# ログアウト
 $ clasp logout
 
-# Create new project
+# プロジェクトを作成
 $ clasp create <project name> --rootDir ./src
 Create new script https://script.google.com/d/xxxxxxxxxxxxxxxxxxxx
 Cloned 1 file.
 └─ appsscript.json
 
-# Open editor in the browser
+# 作成したプロジェクトのエディタをブラウザで開きます。
 $ clasp open
 ```
