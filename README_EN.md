@@ -1,9 +1,7 @@
 # weekly-office-cleaning-notification-bot
 
-
-|       |       |
-| :---: | :---: |
 | [EN](https://github.com/yossiee/weekly-office-cleaning-notification-bot/README_EN.md) | [JA](https://github.com/yossiee/weekly-office-cleaning-notification-bot/README.md) |
+| :---: | :---: |
 
 ## Overview
 Every Monday we clean the office. There is a cleaning duty group, and the group turns around weekly.
