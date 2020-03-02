@@ -1,6 +1,6 @@
 # weekly-office-cleaning-notification-bot
 
-| [EN](https://github.com/yossiee/weekly-office-cleaning-notification-bot/README_EN.md) | [JA](https://github.com/yossiee/weekly-office-cleaning-notification-bot/README.md) |
+| [EN](https://github.com/yossiee/weekly-office-cleaning-notification-bot/blob/master/README_EN.md) | [JA](https://github.com/yossiee/weekly-office-cleaning-notification-bot/blob/master/README.md) |
 | :---: | :---: |
 
 ## Overview
