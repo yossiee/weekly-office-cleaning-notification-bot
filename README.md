@@ -1,5 +1,7 @@
 # weekly-office-cleaning-notification-bot
 
+[EN](https://github.com/yossiee/weekly-office-cleaning-notification-bot/blob/feature/create-doc-ver-en/README_EN.md) / [JA]([EN](https://github.com/yossiee/weekly-office-cleaning-notification-bot/blob/feature/create-doc-ver-en/README.md))
+
 ## 概要
 毎週月曜日にオフィスを掃除しますが、掃除当番グループが決まっており、グループは毎週順番に回していきます。
 今回作ったのは、今週どのグループが担当なのかを毎週時間になると slack に通知するボットを作成しました。
