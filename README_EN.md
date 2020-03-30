@@ -38,9 +38,9 @@ This is a [document](https://developers.google.com/apps-script/guides/clasp).
 
 ```sh
 # Install
-$ npm install @google/clasp -g 
+$ npm install @google/clasp -g
 
-# Login 
+# Login
 $ clasp login
 # Open the browseer then choose the account you want authentication.
 # Aftrer successful authentication, your login information will be saved in `~/.clasprc.json`

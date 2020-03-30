@@ -6,10 +6,10 @@ function updateSheetData(todayGroup, sheetData) {
   }
   for (let j=0;j<sheetData.length;j++) {
     if (sheetData[j][3]) {
-      sheet.getRange(j+2,5).setValue('false: ' + sheetData[j][2]);
+      sheet.getRange(j+2,4).setValue('FALSE');
       continue;
     } else if (sheetData[j][0] === nextGroup) {
-      sheet.getRange(j+2, 5).setValue('true: ' + sheetData[j][2]);
+      sheet.getRange(j+2, 4).setValue('TRUE');
       continue;
     }
   }
