@@ -38,7 +38,7 @@ clasp とは、ローカル環境で Google Apps Script を実行できるプラ
 
 ```sh
 # npm パッケージをグローバルインストールします。
-$ npm install @google/clasp -g 
+$ npm install @google/clasp -g
 
 # ログイン
 $ clasp login
