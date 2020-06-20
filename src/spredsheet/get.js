@@ -20,7 +20,7 @@ function getLastRole(sheetData) {
 
 function getTodayRole(lastRoleGroup, sheetData) {
   let todayRoleMembers = [];
-  if (lastRoleGroup === 4) {
+  if (lastRoleGroup === 3) {
     lastRoleGroup = 0;
   }
   for (let i=0; i<sheetData.length;i++) {
