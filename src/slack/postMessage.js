@@ -9,15 +9,17 @@ const token = 'xoxp-111122223333444455556666777788889999aaaabbbccccddddeeeeffffg
 let params = {},
     response = {};
 
-function postMessage(text) {
+function postMessage(text, threadTimestamp) {
+  // threadTimestamp = "1592646902.008100";
   try {
     let payload = {
       "token" : token,
       "channel" : channelId,
-      "text" : text,
+      "text" : threadTimestamp === "" ? text : "<@UT3MR9FQT> これはサンプルです。",
       "username" : "お掃除通知",
       "icon_emoji": ":apps-script:",
       "link_names": true,
+      "thread_ts": threadTimestamp,
       "attachments": JSON.stringify([{
         pretext: "今週ゴミ捨て担当ですのでよろしくお願いします。\nゴミ袋、ダンボールを地下まで運んでください。",
         color: "#800080",

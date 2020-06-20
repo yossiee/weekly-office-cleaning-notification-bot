@@ -5,7 +5,7 @@ function main() {
       text = makeAttachment(members);
 
   if (isBusinessDay()) {
-    if (postMessage(text)) {
+    if (postMessage(text, "")) {
       updateSheetData(groupNum, sheetData);
     }
   }
