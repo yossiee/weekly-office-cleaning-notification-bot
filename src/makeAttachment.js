@@ -1,6 +1,7 @@
 function makeAttachment(data) {
-  let mentions = '';
-  let text = '\nおはようございます！\n今週の掃除当番の方はお願いします '
+  let mentions = '',
+      text = '\n*ゴミ当番の週です！*';
+
   for (let i=0; i<data.length;i++) {
     mentions += "<@" + data[i] + "> ";
   }

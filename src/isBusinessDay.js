@@ -1,20 +1,21 @@
 function isBusinessDay(){
-  let  today = new Date();
-  let dayOfWeek = today.getDay();
+  let today = new Date(),
+      dayOfWeek = today.getDay();
+
   // allow only `monday`
   if(dayOfWeek !== 1) {
-    console.log("A bot stoped working because today is not Monday.")
+    Logger.log("A bot stoped working because today is not Monday.")
     return false;
   }
 
   const calendarId = "ja.japanese#holiday@group.v.calendar.google.com";
-  const calendar = CalendarApp.getCalendarById(calendarId);
+  let calendar = CalendarApp.getCalendarById(calendarId),
+      todayEvents = calendar.getEventsForDay(today);
 
-  let todayEvents = calendar.getEventsForDay(today);
   if(todayEvents.length > 0){
-    console.log("A bot stoped working because today is public holiday.")
-    console.log(todayEvents)
+    Logger.log("Stoped working because today is public holiday:" + todayEvents)
     return false;
   }
+
   return true;
 }
